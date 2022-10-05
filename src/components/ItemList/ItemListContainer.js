@@ -1,17 +1,18 @@
-import './ItemListContainer.css';
+
 import Container from 'react-bootstrap/Container';
 import { useEffect, useState } from 'react';
 import Itemlist from './ItemList';
 import {useParams} from 'react-router-dom';
 import {getProducts} from '../../utils/products';
+import './ItemListContainer.css';
 
 const ItemListContainer = ({ greeting }) => {
     const {categoryName} = useParams();
-    const [product, setProducts] = useState([]);
+    const [products, setProducts] = useState([]);
 
     useEffect(() => {
         console.log (categoryName);
-    }, {categoryName})
+    }, [categoryName])
 
     useEffect(()=> {
         getProducts()
