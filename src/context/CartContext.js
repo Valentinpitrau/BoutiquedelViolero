@@ -16,17 +16,12 @@ export const CartProvider = ({ children }) => {
       setCart([...cart, item]);
     } else {
       const itemIndex = cart.findIndex((item) => item.id === parseInt(product.id));
-
       const itemDraft = { ...cart[itemIndex] };
-
       itemDraft.quantity = itemDraft.quantity + quantity;
-
       const cartDraft = [...cart];
-
       cartDraft[itemIndex] = itemDraft;
-
       setCart(cartDraft);
-
+    }
   }
 
   const removeItem = (itemId) => {
@@ -50,5 +45,4 @@ export const CartProvider = ({ children }) => {
       {children}
     </CartContext.Provider>
   )
-}
 };

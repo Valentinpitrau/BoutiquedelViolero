@@ -7,9 +7,8 @@ import ItemDetailContainer from './components/ItemDetail/ItemDetailContainer';
 import Cart from './components/Cart/Cart';
 import Checkout from './components/Checkout';
 import ItemListContainer from './components/ItemList/ItemListContainer';
-import { useEffect } from 'react';
-import {doc, getFirestore, getDoc, collection, getDocs} from 'firebase/firestore';
 import { CartProvider } from './context/CartContext';
+import { createAllProducts } from './utils/products';
 
 
 function App() {

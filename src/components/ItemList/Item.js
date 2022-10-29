@@ -5,7 +5,7 @@ import './Item.css';
 
 const Item = ({ product }) => {
   return (
-    <Card style={{ width: '20%' }}>
+    <Card style={{ width: '75%' }}>
       <Card.Img className='img' variant="top" src={product.pictureUrl} />
       <Card.Body>
         <Card.Title>{product.title}</Card.Title>

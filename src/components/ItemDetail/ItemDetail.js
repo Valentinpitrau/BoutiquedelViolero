@@ -14,7 +14,7 @@ const ItemDetail = ({product}) => {
 
     const handleAdd = (value) => {
         setCount(value);
-        showItemCount(false);
+        setShowItemCount(false);
         addItem(product, value);
     }
 
