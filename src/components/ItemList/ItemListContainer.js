@@ -6,7 +6,7 @@ import { getProducts } from '../../utils/products';
 import './ItemListContainer.css';
 
 const ItemListContainer = ({ greeting }) => {
-  const { categoryName } = useParams();
+  const { categoryId } = useParams();
   const [products, setProducts] = useState([]);
 
   const obtenerProductos = () => {
